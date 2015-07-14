@@ -1,0 +1,16 @@
+{
+  "name": "Queuing-Management-System",
+  "version": "0.0.0",
+  "homepage": "https://github.com/4LOOPph/Queuing-Management-System",
+  "authors": [
+    "4loop"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
