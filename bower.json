@@ -12,5 +12,11 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "bootstrap-material-design": "~0.3.0",
+    "angular-ui-router": "~0.2.15",
+    "angularjs": "~1.4.2",
+    "bootstrap": "~3.3.5"
+  }
 }

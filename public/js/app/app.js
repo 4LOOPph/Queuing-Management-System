@@ -4,17 +4,32 @@ var Que = Que || {};
 Que.Controllers = angular.module('Que.controllers', []);
 Que.Services = angular.module('Que.services', []);
 
-var config = function($routeProvider, $httpProvider, $locationProvider) {
-
-    $routeProvider
-        .when('/', {
-            templateUrl: '/public/views/dashboard.html'
+var config = function($stateProvider, $urlRouterProvider) {
+    $stateProvider
+        .state('main', {
+            url: "/main",
+            templateUrl: "public/views/index.html",
+            controller: 'MainCtrl'
         })
-        .otherwise({
-            redirectTo: '/'
-        });
+        .state('screen', {
+            url: "/screen",
+            templateUrl: "public/views/QueingScreen.html",
+            controller: 'MainCtrl'
+        })
+        .state('inquiry', {
+            url: "/inquiry",
+            templateUrl: "public/views/inquiry.html",
+            controller: 'MainCtrl'
+        })
+        .state('controller', {
+            url: "/controller",
+            templateUrl: "public/views/controller.html",
+            controller: 'MainCtrl'
+        })
+
+    $urlRouterProvider.otherwise("/main");
 }
 
 angular
-    .module('Que', ['Que.controllers','Que.services'])
-    .config(config)
+    .module('Que', ['ui.router', 'Que.controllers', 'Que.services'])
+    .config(config);
